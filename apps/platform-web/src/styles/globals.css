@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+    --background: #0a0a1a;
+    --foreground: #ededed;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+html {
+    color-scheme: dark;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+*:focus-visible {
+    outline: 2px solid rgb(129, 140, 248);
+    outline-offset: 2px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    transition: all 0.2s ease;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ededed;
+    -webkit-box-shadow: 0 0 0px 1000px #1a1a2e inset;
+    transition: background-color 5000s ease-in-out 0s;
+}

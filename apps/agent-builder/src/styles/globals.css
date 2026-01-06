@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+    --background: #0a0a1a;
+    --foreground: #ededed;
+}
+
+html {
+    color-scheme: dark;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+*:focus-visible {
+    outline: 2px solid rgb(129, 140, 248);
+    outline-offset: 2px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    transition: all 0.2s ease;
+}
