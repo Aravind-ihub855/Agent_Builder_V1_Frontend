@@ -44,7 +44,7 @@ export function validateWithSchema<T>(schema: z.ZodSchema<T>, data: unknown): {
         return { success: true, data: result.data };
     }
     const errors: Record<string, string> = {};
-    result.error.errors.forEach((err) => {
+    result.error.issues.forEach((err) => {
         if (err.path[0]) {
             errors[err.path[0] as string] = err.message;
         }
